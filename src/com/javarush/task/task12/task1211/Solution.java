@@ -4,7 +4,7 @@ package com.javarush.task.task12.task1211;
 Абстрактный класс Pet
 */
 
-public class Solution {
+public abstract class Solution {
     public static void main(String[] args) {
 
     }
@@ -14,5 +14,6 @@ public class Solution {
             return "Я - котенок";
         }
     }
+    public abstract void metod();
 
 }

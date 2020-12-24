@@ -29,6 +29,9 @@ public class Solution {
     }
 
     public static class Cat extends Pet {
+        public String getName(){
+            return "я - кот";
+        }
 
     }
 }
