@@ -13,6 +13,6 @@ public class Solution {
     }
 
     public static int transformValue(int i) {
-        return i * i;
+        return 2* i;
     }
 }

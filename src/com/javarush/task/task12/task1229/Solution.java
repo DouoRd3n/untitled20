@@ -14,8 +14,11 @@ package com.javarush.task.task12.task1229;
 //    public static interface Businessman {
 //        public void workHard();
 //    }
+//    public abstract class TheLeader{
+//        abstract void theLeader();
+//    }
 //
-//    public static class CTO implements Businessman {
+//    public static abstract class CTO extends TheLeader implements Businessman {
 //
 //    }
 //}

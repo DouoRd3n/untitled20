@@ -9,16 +9,56 @@ public class Solution {
     public static void main(String[] args) {
 
     }
-
-    public class Cat {
+    interface CanFly{
+        void fly();
+    }
+    interface CanClimb{
+        void climb();
+    }
+    interface CanRun{
+        void run();
     }
 
-    public class Dog {
+    public class Cat implements CanClimb, CanRun {
+        @Override
+        public void climb() {
+
+        }
+
+        @Override
+        public void run() {
+
+        }
     }
 
-    public class Tiger extends Cat {
+    public class Dog implements CanRun{
+        @Override
+        public void run() {
+
+        }
     }
 
-    public class Duck {
+    public class Tiger extends Cat  {
+        @Override
+        public void run() {
+            super.run();
+        }
+
+        @Override
+        public void climb() {
+            super.climb();
+        }
+    }
+
+    public class Duck implements CanRun, CanFly{
+        @Override
+        public void fly() {
+
+        }
+
+        @Override
+        public void run() {
+
+        }
     }
 }

@@ -17,13 +17,15 @@ public class Solution {
     public static String getObjectType(Object o) {
         //напишите тут ваш код
         if (o instanceof Cat){
-            return "Кот";
-        }
-        else if (o instanceof Tiger){
-            return "Тигр";
-        }
-        else if (o instanceof Lion){
-            return "Лев";
+            if (o instanceof Tiger){
+                return "Тигр";
+            }
+            else if (o instanceof Lion){
+                return "Лев";
+            } else {
+                return "Кот";
+            }
+
         }
         else if (o instanceof Bull){
             return "Бык";

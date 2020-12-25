@@ -20,8 +20,25 @@ public class Solution {
         }
 
         //напишите тут ваш код
+        int max = 0;
+        for (int i = 0; i <array.length ; i++) {
+            if (max<array[i]){
+                max=array[i];
+            }
 
-        return new Pair<Integer, Integer>(0, 0);
+        }
+        int min=max;
+        int index=0;
+        for (int i = 0; i <array.length ; i++) {
+            if (min>array[i]){
+                min=array[i];
+                index = i;
+
+            }
+
+        }
+
+        return new Pair<Integer, Integer>(min, index);
     }
 
 
