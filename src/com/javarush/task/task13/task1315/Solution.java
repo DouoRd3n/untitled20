@@ -8,6 +8,47 @@ public class Solution {
     public static void main(String[] args) {
 
     }
+    public static class Mouse implements Movable, Edible{
+
+        @Override
+        public void move() {
+
+        }
+
+        @Override
+        public void beEaten() {
+
+        }
+    }
+    public static class Dog implements Movable, Eat{
+
+        @Override
+        public void move() {
+
+        }
+
+        @Override
+        public void eat() {
+
+        }
+    }
+    public static class Cat implements Movable, Edible, Eat{
+
+        @Override
+        public void move() {
+
+        }
+
+        @Override
+        public void beEaten() {
+
+        }
+
+        @Override
+        public void eat() {
+
+        }
+    }
 
     //может двигаться
     public interface Movable {

@@ -1,6 +1,6 @@
 package com.javarush.task.task13.task1305;
 
-/* 
+/*
 Четыре ошибки
 */
 
