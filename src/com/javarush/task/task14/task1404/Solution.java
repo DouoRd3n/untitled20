@@ -1,7 +1,10 @@
 package com.javarush.task.task14.task1404;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 /* 
 Коты
@@ -10,6 +13,36 @@ import java.io.InputStreamReader;
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
+        CatFactory catFactory = new CatFactory();
+
+        List<Cat> listCat = doAction();
+        printListCat(listCat);
+    }
+
+    private static void printListCat(List<Cat> listCat) {
+        for (int i = 0; i < listCat.size() ; i++) {
+            System.out.println(listCat.get(i).toString());
+        }
+    }
+
+    private static ArrayList<Cat> doAction() {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        ArrayList<Cat> list = new ArrayList<>();
+        while (true){
+
+            try {
+                String key = reader.readLine();
+                if (key.equals("")){
+                    break;
+                }else{
+                    list.add(CatFactory.getCatByKey(key)) ;
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        } return list;
     }
 
     static class CatFactory {
