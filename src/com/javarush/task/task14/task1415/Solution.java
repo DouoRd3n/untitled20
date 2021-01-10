@@ -19,6 +19,16 @@ public class Solution {
 
     public static void cleanAllApartments(List<Apartment> apartments) {
         //написать тут вашу реализацию пунктов 1-4
+        for (int i = 0; i <apartments.size() ; i++) {
+            if (apartments.get(i) instanceof OneRoomApt){
+                ((OneRoomApt) apartments.get(i)).clean1Room();
+            }else if (apartments.get(i) instanceof TwoRoomApt){
+                ((TwoRoomApt) apartments.get(i)).clean2Rooms();
+            }else if (apartments.get(i) instanceof ThreeRoomApt){
+                ((ThreeRoomApt) apartments.get(i)).clean3Rooms();
+            }
+        }
+
     }
 
     static interface Apartment {
