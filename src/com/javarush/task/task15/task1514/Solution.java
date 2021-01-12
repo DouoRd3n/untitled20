@@ -10,7 +10,13 @@ import java.util.Map;
 public class Solution {
     public static Map<Double, String> labels = new HashMap<Double, String>();
 
+
     public static void main(String[] args) {
+        labels.put(10d, "qweqwe");
+        labels.put(11d, "sdfdsf");
+        labels.put(12d, "sdfsdf");
+        labels.put(13d, "sdfsdf");
+        labels.put(14d, "sdfsdf");
         System.out.println(labels);
     }
 }

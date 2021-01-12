@@ -17,9 +17,7 @@ public class Solution {
         System.out.println("Это Integer");
     }
 
-    public static void print(int i) {
-        System.out.println("Это Integer");
-    }
+
 
     public static void print(Short i) {
         System.out.println("Это Object");
@@ -37,7 +35,4 @@ public class Solution {
         System.out.println("Это double");
     }
 
-    public static void print(float i) {
-        System.out.println("Это Double");
-    }
 }

@@ -9,13 +9,28 @@ import java.io.InputStreamReader;
 */
 
 public class Solution {
+
     public static int A;
     public static int B;
 
     public static final int MIN = min(A, B);
 
     public static void main(String[] args) {
+        A = read();
+        B = read();
         System.out.println(MIN);
+    }
+
+    private static int read() {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int i = 0;
+       try {
+           i = Integer.parseInt(reader.readLine());
+       } catch (IOException e) {
+           e.printStackTrace();
+       }
+           return i;
+
     }
 
     public static int min(int a, int b) {
