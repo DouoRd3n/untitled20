@@ -9,6 +9,12 @@ public class Solution {
 
     static {
         //throw an exception here - выбросьте эксепшн тут
+        try {
+            throw new NumberFormatException();
+
+        } catch ( NumberFormatException e){
+            e.printStackTrace();
+        }
     }
 
     public static int B = 5;

@@ -12,26 +12,40 @@ public class Solution {
 
     public static int A;
     public static int B;
+    public static  int MIN;
 
-    public static final int MIN = min(A, B);
 
-    public static void main(String[] args) {
-        A = read();
-        B = read();
+
+    public static void main(String[] args)  {
+        A = Integer.parseInt(read());
+        B = Integer.parseInt(read());
+        MIN =  min(A, B);
         System.out.println(MIN);
+
+
     }
 
-    private static int read() {
+
+    private static String read()  {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int i = 0;
-       try {
-           i = Integer.parseInt(reader.readLine());
-       } catch (IOException e) {
-           e.printStackTrace();
-       }
-           return i;
+        String s = null;
+        try {
+             s =reader.readLine();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }finally {
+            if (s.equals("")){
+                System.out.println("enter some number");
+            }
+             return s;
+
+
+        }
+
+
 
     }
+
 
     public static int min(int a, int b) {
         return a < b ? a : b;
