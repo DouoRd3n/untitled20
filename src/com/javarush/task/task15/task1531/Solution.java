@@ -16,12 +16,20 @@ public class Solution {
         int input = Integer.parseInt(reader.readLine());
         reader.close();
 
-        System.out.println(factorial(input));
+        System.out.println(input + "! =" + factorial(input));
     }
 
     public static String factorial(int n) {
         //add your code here
+        int result = 1;
+        if (n==0){
+            return String.valueOf(n);
+        } else {
+            for (int i = 1; i <=n ; i++) {
+                result =result*i;
+            }
+        }
 
-        return "";
+        return String.valueOf(result);
     }
 }
